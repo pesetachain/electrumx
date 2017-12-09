@@ -1216,4 +1216,20 @@ class Chips(Coin):
     RPC_PORT = 57776
     REORG_LIMIT = 800
 
-
+class Pesetacoin(AuxPowMixin,Coin):
+    NAME = "Pesetacoin"
+    SHORTNAME = "PTC"
+    NET = "mainnet"
+    XPUB_VERBYTES = bytes.fromhex("0488c42e")
+    XPRV_VERBYTES = bytes.fromhex("0488e1f4")
+    P2PKH_VERBYTE = bytes.fromhex("2f")
+    P2SH_VERBYTES = [bytes.fromhex("16")]
+    WIF_BYTE = bytes.fromhex("af")
+    GENESIS_HASH = ('edfe5830b53251bfff733600b1cd5c19'
+                    '2e761c011b055f07924634818c906438')
+    TX_COUNT = 2192681
+    TX_COUNT_HEIGHT = 1969646
+    TX_PER_BLOCK = 5
+    IRC_PREFIX = "E_"
+    IRC_CHANNEL = "#electrum-ptc"
+    REORG_LIMIT = 2000
